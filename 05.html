@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Position</title>
+  <style>
+    body { height: 2000px; }
+    #wrap { width: 500px; height: 400px; border: 10px solid blue; margin: 0 auto;
+            position: relative; }
+    .box { width: 50px; height: 50px; background-color: green; color: #fff;
+           text-align: center; line-height: 50px;
+           position: absolute; }
+    .center { width: 100px; height: 100px; background-color: brown; color: #fff;
+           text-align: center; line-height: 50px;
+           position: absolute; }
+    .top { width: 100px; height: 50px; background-color: brown; color: #fff;
+           text-align: center; line-height: 50px;
+           position: absolute; }
+    .box:nth-child(1) { left: 0; top: 0; }
+    .box:nth-child(2) { right: 0; top: 0; }
+    .box:nth-child(3) { left: 0; bottom: 0; }
+    .box:nth-child(4) { right: 0; bottom: 0; }
+    .box:nth-child(5) { left: 50%; top: 50%; margin-left: -50px; margin-top: -50px;
+                        border-radius: 50%; }
+    .box:nth-child(6) { left: 200px; top: 0; }
+    footer { border-top: 10px solid palevioletred; padding: 20px 0;
+      position: relative;}
+    footer p { text-align: center; color: palevioletred;
+              text-transform: uppercase;}
+    footer span { width: 30px; height: 30px; background-color: palevioletred;
+              position: absolute; border-radius: 50%;
+              text-align: center; line-height: 30px;
+            top: 50%; margin-top: -15px;}
+    footer span:nth-of-type(1) {z-index:0; right:100px;}
+    footer span:nth-of-type(2) {z-index:0; right:60px;}
+    footer span:nth-of-type(3) {z-index:0; right:20px;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box center">중앙배치</div>
+    <div class="box top">TOP/CENTER</div>
+  </div>
+  <footer>
+    <span class="span">S</span>
+    <span class="span">N</span>
+    <span class="span">S</span>
+  </footer>
+  <aside class="aside"></aside>
+</body>
+</html>

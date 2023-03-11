@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>레이아웃 연습</title>
+  <style>
+    * { margin: 0; padding: 0; }
+    #wrap { width: 800px; border: 1px solid #ccc; margin: 0 auto; padding: 10px;
+    box-sizing: border-box;}
+    .border { border: 1px solid #ccc;}
+    .aside { border: 1px solid #ccc;}
+    header { padding: 30px 20px; margin-bottom: 10px; background-color: skyblue;}
+    header h1 { color: palevioletred; font-size:22px; text-align: center; line-height: 1;
+    margin-bottom: 15px;}
+    /* h1::before { content: ""; background-color: #fff;}
+    h1::after { content: "";} */
+    header .menu  {list-style: none; margin: 0 auto; border: 1px solid blue; width: 495px; }
+    .clear::after { content: ""; display: block; clear:both;}
+    header .menu li { float:left; width: 120px; height: 30px; line-height: 30px;
+      border: 1px solid palevioletred; text-align: center; color:#ccc;
+      background-color:blue; box-sizing: border-box; margin-right: 10px;}
+    header .menu li:last-child { margin-right: 0;}
+    header .menu li a { text-decoration: none; color: palevioletred; }
+    main { margin-bottom: 15px; background-color: yellow; overflow: hidden;}
+    /* main::after { content: ""; display: block; clear:both;} */
+    aside { padding: 30px 20px; float: left ; width: 150px; background-color:darkolivegreen; }
+    section { padding: 30px 20px; float: right; width: 540px; background-color:chocolate;}
+
+    /* aside ul { padding-left: 20px;} */
+    main h2 { margin-bottom: 10px;}
+    /* section p + p { margin-top: 10px;} */
+    footer { padding: 30px 20px; background-color: skyblue; text-align: center;}
+    footer p { line-height: 1;}
+    #wrap header:first-child{ border: red;}
+  </style>
+</head>
+<body>
+  <div id="wrap" class="border">
+    <header>
+      <h1>LOGO</h1>
+      <ul class="menu clear">
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+        <li><a href="#">메뉴4</a></li>
+      </ul>
+    </header>
+    <main>
+      <aside class="border">
+        <h2>서브 베너단</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam iusto atque error harum sint dolor placeat blanditiis ipsam, voluptatibus provident sapiente facilis obcaecati mollitia, ullam accusantium eligendi incidunt quasi iste.</p>
+      </aside>
+      <section class="border">
+        <h2>본문단</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam iusto atque error harum sint dolor placeat blanditiis ipsam, voluptatibus provident sapiente facilis obcaecati mollitia, ullam accusantium eligendi incidunt quasi iste.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam iusto atque error harum sint dolor placeat blanditiis ipsam, voluptatibus provident sapiente facilis obcaecati mollitia, ullam accusantium eligendi incidunt quasi iste.</p>
+      </section>
+    </main>
+  <footer>
+    <p>copyright</p>
+  </footer>
+
+  </div>
+</body>
+</html>
