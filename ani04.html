@@ -1,69 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible"
-      content="IE=edge">
-    <meta name="viewport"
-      content="width=device-width, initial-translate=1.0">
-    <title>2D transform : translate() 회전</title>
-    <style>
-      .origin {
-        width: 332px;
-        height: 150px;
-        border: 1px solid #ccc;
-        margin: 10px auto;
-        perspective: 500px;
-      }
-
-      .origin>div {
-        transition-property: transform;
-        transition-duration: 1s;
-        transition-timing-function: ease;
-        /* transition-delay: 0.5s; */
-      }
-
-      .translate:hover {
-        transform: translate(-50px, -50px);
-      }
-
-      .translateX:hover {
-        transform: translateX(-50px);
-      }
-
-      .translateY:hover {
-        transform: translateY(50px);
-      }
-
-      .translate3d:hover {
-        transform: translate3d(50px, 50px, -100px);
-      }
-    </style>
-  </head>
-  <body>
-    <div class="origin">
-      <div class="translate">
-        <img src="coupang.jpg"
-          alt="">
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>2D transform : rotate() 3d 회전 </title>
+  <style>
+    .origin { width: 332px; height: 150px; border: 1px solid #ccc;
+              margin: 10px auto; perspective: 500px; }
+    .origin > div { 
+      transition-property: transform;
+      transition-duration: 1s;
+      transition-timing-function: ease;
+      /* transition-delay: 5s; */
+    }          
+    .rotate:hover { transform: rotate(90deg); }              
+    .rotateX:hover { transform: rotateX(360deg); }              
+    .rotateY:hover { transform: rotateY(360deg); }              
+  </style>
+</head>
+<body>
+  <div class="origin">
+    <div class="rotate">
+      <img src="coupang.jpg" alt="">
     </div>
-    <div class="origin">
-      <div class="translateX">
-        <img src="coupang.jpg"
-          alt="">
-      </div>
+  </div>
+  <div class="origin">
+    <div class="rotateX">
+      <img src="coupang.jpg" alt="">
     </div>
-    <div class="origin">
-      <div class="translateY">
-        <img src="coupang.jpg"
-          alt="">
-      </div>
+  </div>
+  <div class="origin">
+    <div class="rotateY">
+      <img src="coupang.jpg" alt="">
     </div>
-    <div class="origin">
-      <div class="translate3d">
-        <img src="coupang.jpg"
-          alt="">
-      </div>
-    </div>
-  </body>
+  </div>
+</body>
 </html>
